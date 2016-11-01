@@ -3,11 +3,12 @@ package ge.mziuri.library.model;
 
 
 public class Author {
+     private int id;
+
    private String firstname;
      private String lastname;
        private String country;
-         private int id;
-
+        
     public String getFirstname() {
         return firstname;
     }

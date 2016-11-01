@@ -9,6 +9,6 @@ package ge.mziuri.library.Dao;
  *
  * @author User
  */
-public class Book {
+public class BookDao {
     
 }
