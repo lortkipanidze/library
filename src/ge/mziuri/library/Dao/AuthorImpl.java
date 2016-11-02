@@ -28,7 +28,7 @@ public class AuthorImpl implements AuthorDao {
    @Override
      public void addAuthor(Author author){
          try {
-            pstmt = con.prepareStatement("INSERT INTO author (id,firstname,lastname ,country) VALUES (?,?,?);");
+            pstmt = con.prepareStatement("INSERT INTO author (firstname,lastname ,country) VALUES (?,?,?);");
            pstmt.setString(1,author.getFirstname());
              pstmt.setString(2, author.getLastname());
                pstmt.setString(3, author.getCountry());
@@ -52,7 +52,7 @@ public class AuthorImpl implements AuthorDao {
     }
 
    // @Override
-  /*  public List<Author> sortAuthors() {
+/*    public List<Author> sortAuthors() {
         List<Author> authors = new ArrayList<>();
         try {
             pstmt = con.prepareStatement("SELECT * FROM author ");
@@ -62,15 +62,16 @@ public class AuthorImpl implements AuthorDao {
                 String firstname = rs.getString("firstname");
                 String lastname = rs.getString("lasttname");
                 String country = rs.getString("country");
-               Author author = new  Author(id, firstname, lastname, country);
+               Author author = new  Author(firstname, lastname, country ,id);
                 authors.add(author);
+                
                 
             } 
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
-        return citie;
-    }*/
+        return authors ORDER BY
+    */
 
     @Override
     public void closeConnection() {

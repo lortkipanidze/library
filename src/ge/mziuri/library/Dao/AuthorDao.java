@@ -2,7 +2,7 @@
 package ge.mziuri.library.Dao;
 
 import ge.mziuri.library.model.Author;
-import java.util.List;
+
 
 
 public interface AuthorDao {
