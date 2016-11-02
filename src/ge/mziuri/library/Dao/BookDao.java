@@ -1,14 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ge.mziuri.library.Dao;
 
-/**
- *
- * @author User
- */
-public class BookDao {
+import java.sql.Date;
+import ge.mziuri.library.Dao.BookImpl;
+import ge.mziuri.library.model.Book;
+import java.util.List;
+   
+
+
+public interface BookDao {
+    void addBook(Book Book);
+    void deleteBook(int id);
+    List<Book> getBookByYear(int Date);
     
+    void closeConnection();
 }

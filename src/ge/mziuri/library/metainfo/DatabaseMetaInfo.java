@@ -10,4 +10,13 @@ public class DatabaseMetaInfo {
     public static final String username = "postgres";
     
     public static final String passsword = "pass";
+
+    public static void closeConnection(Connection con, PreparedStatement pstmt) {
+        try {
+            pstmt.close();
+            con.close();
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+}
 }
