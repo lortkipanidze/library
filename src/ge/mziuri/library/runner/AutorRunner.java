@@ -1,14 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ge.mziuri.library.runner;
 
-/**
- *
- * @author lortkipanidze
- */
+import ge.mziuri.library.Dao.AuthorDao;
+import ge.mziuri.library.Dao.AuthorImpl;
+import ge.mziuri.library.model.Author;
+
 public class AutorRunner {
-    
+     AuthorDao abc =new AuthorImpl();
+      Author author1 = new Author( "ფრედერიკ" ,"ბეგბედერი", "საფრანგეთი,",1);
+     abc.addAuthor(author1);
+     abc.deleteAuthor(4);
+     
+     
+     
 }
